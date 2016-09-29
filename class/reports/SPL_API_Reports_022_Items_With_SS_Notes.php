@@ -31,8 +31,6 @@ class SPL_API_Reports_022_Items_With_SS_Notes extends SPL_API_Reports {
 	}
 
 
-
-
 }
 
 ?>
