@@ -19,7 +19,7 @@ class SPL_API_Reports_207_New_Employee_Request extends SPL_API_Reports {
 
         $message = Swift_Message::newInstance('New Employee Request')
         ->setFrom(array('itsupport@spokanelibrary.org' => 'IT Support'))
-        //->setTo(array('sgirard@spokanelibrary.org' => 'IT Support'))
+        //->setTo(array('@spokanelibrary.org' => 'IT Support'))
         ->setTo(array('itsupport@spokanelibrary.org' => 'IT Support'))
         ->setBody($this->getMessage(), 'text/html')
         ;

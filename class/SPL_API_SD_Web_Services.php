@@ -72,11 +72,6 @@ class SPL_API_SD_Web_Services extends SPL_DB {
 
       switch ( $this->method[1] ) {
         case 'renew':
-            //$params = array('itemID'=>'37413315426371');
-            //$params = array('itemID'=>'37413315035355');
-            //$params = array('itemID'=>'37413309357715');
-            //$params = array('itemID'=>'37413312068085');
-
 
             //$hzws = $this->params;
 

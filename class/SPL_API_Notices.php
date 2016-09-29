@@ -12,7 +12,7 @@ class SPL_API_Notices extends SPL_DB {
   var $config;
 
   var $devmode = false;
-  var $devaddr = 'sgirard@spokanelibrary.org';
+  var $devaddr = '';
 
   var $batch = 10; // number of borrowers to process 
   var $offset = 3; // days in the future (needs to match the overnight proc!)
