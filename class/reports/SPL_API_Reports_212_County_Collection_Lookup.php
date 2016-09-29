@@ -38,7 +38,7 @@ class SPL_API_Reports_212_County_Collection_Lookup extends SPL_API_Reports {
     			$result[$b][$k] = trim($v);
     		}
 
-    		$result[$b]['birthdate'] = str_ireplace('|', '', $b['birthdate']);
+    		$result[$b]['birthdate'] = str_ireplace('|', '', $borrower['birthdate']);
     	}
 
     	return $result;
