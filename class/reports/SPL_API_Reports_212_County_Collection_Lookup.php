@@ -28,12 +28,12 @@ class SPL_API_Reports_212_County_Collection_Lookup extends SPL_API_Reports {
                         ,$this->config['api']['web_pass']
                         );
 
-		$params = array(':lastname'=>'%'.$this->params['vals']['lastname'].'%');
-
+		//$params = array(':lastname'=>'%'.$this->params['vals']['lastname'].'%');
+		$params = array();
 		$sql = "SELECT
 						*
 						FROM spl_county_collections
-						WHERE name LIKE :lastname
+						WHERE name LIKE ".'%'.$this->params['vals']['lastname'].'%'."
             ";
 
     	$result = $this->getQuery($sql, $params);
