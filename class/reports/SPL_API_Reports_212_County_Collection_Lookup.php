@@ -34,7 +34,7 @@ class SPL_API_Reports_212_County_Collection_Lookup extends SPL_API_Reports {
     	$result = $this->getQuery($sql, $params);
 
     	foreach ( $result as $k => $v ) {
-    		$result[$k]['birthdate'] = trim($v['birthdate']);
+    		$result[$k]['birthdate'] = str_ireplace('|', '', trim($v['birthdate']));
     	}
 
     	return $result;
