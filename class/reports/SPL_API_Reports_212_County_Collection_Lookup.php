@@ -33,7 +33,7 @@ class SPL_API_Reports_212_County_Collection_Lookup extends SPL_API_Reports {
 		$sql = "SELECT
 						*
 						FROM spl_county_collections
-						WHERE name LIKE %:lastname%
+						WHERE name LIKE '%:lastname%'
             ";
 
     	$result = $this->getQuery($sql, $params);
