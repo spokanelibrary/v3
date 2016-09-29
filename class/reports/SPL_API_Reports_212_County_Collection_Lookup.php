@@ -36,6 +36,8 @@ class SPL_API_Reports_212_County_Collection_Lookup extends SPL_API_Reports {
             ";
 
     	$result = $this->getQuery($sql, $params);
+
+    	return $result;
 	}
 
     
