@@ -35,7 +35,7 @@ class SPL_API_Reports_212_County_Collection_Lookup extends SPL_API_Reports {
 
     	foreach ( $result as $b => $borrower ) {
     		foreach ( $borrower as $k => $v ) {
-    			$result[$b][$v] = str_ireplace('|', '', trim($v));
+    			$result[$b][$k] = str_ireplace('|', '', trim($v));
     		}
     	}
 
