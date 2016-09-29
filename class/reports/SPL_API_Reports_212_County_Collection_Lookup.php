@@ -33,8 +33,10 @@ class SPL_API_Reports_212_County_Collection_Lookup extends SPL_API_Reports {
 
     	$result = $this->getQuery($sql, $params);
 
-    	foreach ( $result as $k => $v ) {
-    		$result[$k]['birthdate'] = str_ireplace('|', '', trim($v['birthdate']));
+    	foreach ( $result as $b => $borrower ) {
+    		foreach ( $borrower as $k => $v ) {
+    			$result[$b][$v] = str_ireplace('|', '', trim($v));
+    		}
     	}
 
     	return $result;
