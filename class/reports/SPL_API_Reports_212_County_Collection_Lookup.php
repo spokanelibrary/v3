@@ -5,7 +5,7 @@ class SPL_API_Reports_212_County_Collection_Lookup extends SPL_API_Reports {
 	public function getReportData() {
 		
 		$report = new stdClass();
-
+		return $this->params['vals']['lastname'];	
 		if ( $this->params['vals']['lastname'] ) {
 			$result = $this->lookupBorrowerName();
 		} else {
@@ -13,7 +13,7 @@ class SPL_API_Reports_212_County_Collection_Lookup extends SPL_API_Reports {
 		}
 
 	    if ( empty($result) ) {
-	    	$result = array('error'=>'No results found.');
+	    	//$result = array('error'=>'No results found.');
 	    }
 
 	    $report->sorted = $result;
