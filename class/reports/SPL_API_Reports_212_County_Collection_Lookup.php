@@ -22,7 +22,7 @@ class SPL_API_Reports_212_County_Collection_Lookup extends SPL_API_Reports {
 	}
 
 	protected function lookupBorrowerName() {
-
+		return 'joy';
 		$this->pdo = new PDO($this->config['api']['connect']
                         ,$this->config['api']['web_user']
                         ,$this->config['api']['web_pass']
