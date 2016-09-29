@@ -22,17 +22,13 @@ class SPL_API_Reports_212_County_Collection_Lookup extends SPL_API_Reports {
 	}
 
 	protected function lookupBorrowerName() {
-		/*
-		$this->pdo = new PDO($this->config['api']['connect']
-                        ,$this->config['api']['web_user']
-                        ,$this->config['api']['web_pass']
-                        );
-		*/
-		//$params = array(':lastname'=>'%'.$this->params['vals']['lastname'].'%');
-		$params = array();
+
+		$params = array(':lastname'=>'%'.$this->params['vals']['lastname'].'%');
+		
 		$sql = "SELECT
-						*
-						FROM SPL_Connect.dbo.spl_county_collections
+				*
+				FROM SPL_Connect.dbo.spl_county_collections
+				WHERE name LIKE :lastname
             ";
 
     	$result = $this->getQuery($sql, $params);
