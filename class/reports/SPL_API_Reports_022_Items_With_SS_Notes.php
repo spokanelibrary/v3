@@ -2,6 +2,8 @@
 
 class SPL_API_Reports_022_Items_With_SS_Notes extends SPL_API_Reports {
 
+	// Make sure class name matches file name!
+	
 	public function getReportData() {
 		//return $this->params['vals']['branch'];
 		
