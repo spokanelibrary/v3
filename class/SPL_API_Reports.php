@@ -61,7 +61,7 @@ class SPL_API_Reports extends SPL_DB {
     $files = scandir( __DIR__.'/reports/' );
     foreach ($files as $file) {
       // ignore directories and hidden files
-      if(0 !== stripos($file, '.')) {
+      if(0 !== stripos($file, '.') && !isset($class->name) ) {
         //$class->scan = $this->params['id'];
         if ( substr_count(strtolower(str_ireplace('_', '-', $file)), strtolower($this->params['id'])) ) {
           $class->path = $file;
