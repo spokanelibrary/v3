@@ -20,7 +20,7 @@ class SPL_API_Reports_211_County_Collection_Lookup extends SPL_API_Reports {
   var $processed; 
 
   public function getReportData() {
-    //$this->unlinkLockFile(); // clear failed run
+    $this->unlinkLockFile(); // clear failed run
 
     $this->pdo = new PDO($this->config['api']['connect']
                         ,$this->config['api']['web_user']
@@ -32,8 +32,6 @@ class SPL_API_Reports_211_County_Collection_Lookup extends SPL_API_Reports {
 		$report->params = $this->params;
 
     $this->userfile = $this->params['files']['collectionlist'];
-
-    return $this->params;
 
     // Remove last run
     if ( is_file($this->upload.$this->subdir.$this->dataload) ) {
