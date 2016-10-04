@@ -43,7 +43,7 @@ class SPL_API_Reports extends SPL_DB {
   }
 
   public function getApiRequest() {
-    //return $this->params;
+    return $this->params;
     $class = $this->getReportClass();
     if ( is_object($class) ) {
       include 'reports/'.$class->path;
