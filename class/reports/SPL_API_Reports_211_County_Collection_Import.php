@@ -5,7 +5,7 @@ ini_set("memory_limit","2G");
 
 
 
-class SPL_API_Reports_211_County_Collection_Lookup extends SPL_API_Reports {
+class SPL_API_Reports_211_County_Collection_Import extends SPL_API_Reports {
 
   var $keys;
   var $configAPI;
@@ -20,7 +20,7 @@ class SPL_API_Reports_211_County_Collection_Lookup extends SPL_API_Reports {
   var $processed; 
 
   public function getReportData() {
-    $this->unlinkLockFile(); // clear failed run
+    //$this->unlinkLockFile(); // clear failed run
 
     $this->pdo = new PDO($this->config['api']['connect']
                         ,$this->config['api']['web_user']
