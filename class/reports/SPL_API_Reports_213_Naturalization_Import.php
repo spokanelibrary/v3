@@ -52,8 +52,7 @@ class SPL_API_Reports_213_Naturalization_Import extends SPL_API_Reports {
     if ( $this->uploaded ) {
       $this->processFile();
       if ( $this->processed ) {
-          //$report->sorted = $this->loadCollectionData();
-          $report->sorted = $this->params;
+          $report->sorted = $this->loadCollectionData();
       } else {
         $report->error = 'File not processed.';
       }
@@ -70,7 +69,11 @@ class SPL_API_Reports_213_Naturalization_Import extends SPL_API_Reports {
 
     $params = array();
 
-    $sql = "EXEC spl_load_county_collections";
+    if ( !empty($this->params['truncate'] ) {
+      $sql = "EXEC spl_connect_load_naturalization 1";
+    } else {
+      $sql = "EXEC spl_connect_load_naturalization";
+    }
     $result = $this->getQuery($sql, $params); 
 
     return $result;
