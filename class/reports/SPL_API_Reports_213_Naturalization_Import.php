@@ -31,7 +31,7 @@ class SPL_API_Reports_213_Naturalization_Import extends SPL_API_Reports {
 
 		$report->params = $this->params;
 
-    $this->userfile = $this->params['files']['collectionlist'];
+    $this->userfile = $this->params['files']['naturalization'];
 
     // Remove last run
     if ( is_file($this->upload.$this->subdir.$this->dataload) ) {
