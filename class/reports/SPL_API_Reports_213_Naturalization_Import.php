@@ -53,7 +53,6 @@ class SPL_API_Reports_213_Naturalization_Import extends SPL_API_Reports {
       $this->processFile();
       if ( $this->processed ) {
           $report->sorted = $this->loadCollectionData();
-          //$report->sorted = $this->params;
       } else {
         $report->error = 'File not processed.';
       }
