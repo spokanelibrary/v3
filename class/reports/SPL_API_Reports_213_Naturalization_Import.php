@@ -20,7 +20,7 @@ class SPL_API_Reports_213_Naturalization_Import extends SPL_API_Reports {
   var $processed; 
 
   public function getReportData() {
-    //$this->unlinkLockFile(); // clear failed run
+    $this->unlinkLockFile(); // clear failed run
 
     $this->pdo = new PDO($this->config['api']['connect']
                         ,$this->config['api']['web_user']
