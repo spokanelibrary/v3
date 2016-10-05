@@ -23,8 +23,8 @@ class SPL_API_Reports_213_Naturalization_Import extends SPL_API_Reports {
     //$this->unlinkLockFile(); // clear failed run
 
     $this->pdo = new PDO($this->config['api']['connect']
-                        ,$this->config['api']['web_user']
-                        ,$this->config['api']['web_pass']
+                        ,$this->config['api']['hz_user']
+                        ,$this->config['api']['hz_pass']
                         );
 
 		$report = new stdClass();
