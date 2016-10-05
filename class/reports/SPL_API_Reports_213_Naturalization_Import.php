@@ -13,7 +13,7 @@ class SPL_API_Reports_213_Naturalization_Import extends SPL_API_Reports {
   var $adhoc = '/mnt/horizon/onestop/adhoc';
   var $upload = '/var/web/---/upload';
   var $subdir = '/naturalization/';
-  var $dataload = 'naturalization.csv';
+  var $dataload = 'naturalization.txt';
   var $lockfile = '.natlock';
   var $userfile;
   var $uploaded;
