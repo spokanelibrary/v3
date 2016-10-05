@@ -66,10 +66,10 @@ class SPL_API_Reports_213_Naturalization_Import extends SPL_API_Reports {
 	}
 
   protected function loadNaturalizationData() {
-    return $this->params;
+    //return $this->params;
     $params = array();
 
-    if ( !empty($this->params['truncate']) ) {
+    if ( !empty($this->params['vals']['truncate']) ) {
       $sql = "EXEC spl_connect_load_naturalization 1";
     } else {
       $sql = "EXEC spl_connect_load_naturalization";
