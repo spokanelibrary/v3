@@ -22,8 +22,6 @@ class SPL_API_Reports_213_Naturalization_Import extends SPL_API_Reports {
   public function getReportData() {
     //$this->unlinkLockFile(); // clear failed run
 
-    return $this->params['files'];
-
     $this->pdo = new PDO($this->config['api']['connect']
                         ,$this->config['api']['web_user']
                         ,$this->config['api']['web_pass']
@@ -55,6 +53,7 @@ class SPL_API_Reports_213_Naturalization_Import extends SPL_API_Reports {
       $this->processFile();
       if ( $this->processed ) {
           //$report->sorted = $this->loadCollectionData();
+          $report->sorted = $this->params;
       } else {
         $report->error = 'File not processed.';
       }
