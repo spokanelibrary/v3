@@ -52,8 +52,8 @@ class SPL_API_Reports_213_Naturalization_Import extends SPL_API_Reports {
     if ( $this->uploaded ) {
       $this->processFile();
       if ( $this->processed ) {
-          //$report->sorted = $this->loadNaturalizationData();
-          $report->sorted = true;
+          $report->sorted = $this->loadCollectionData();
+          //$report->sorted = $this->params;
       } else {
         $report->error = 'File not processed.';
       }
@@ -66,11 +66,11 @@ class SPL_API_Reports_213_Naturalization_Import extends SPL_API_Reports {
     return $report;
 	}
 
-  protected function loadNaturalizationData() {
+  protected function loadCollectionData() {
 
     $params = array();
 
-    if ( !empty($this->params['truncate'] ) {
+    if ( !empty($this->params['truncate']) ) {
       $sql = "EXEC spl_connect_load_naturalization 1";
     } else {
       $sql = "EXEC spl_connect_load_naturalization";
