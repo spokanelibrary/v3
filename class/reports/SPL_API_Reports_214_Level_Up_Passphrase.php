@@ -12,6 +12,8 @@ class SPL_API_Reports_214_Level_Up_Passphrase extends SPL_API_Reports {
 
 		$params = array();
 
+
+
 		
 		$sql = "SELECT 
 				passphrase
@@ -21,7 +23,7 @@ class SPL_API_Reports_214_Level_Up_Passphrase extends SPL_API_Reports {
 
     	$result = $this->getQuery($sql, $params);
 
-	   	$report->sorted = $result;
+	   	$report->sorted = $result[0];
 
     	$report->count = count($result);
 
