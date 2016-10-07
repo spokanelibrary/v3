@@ -62,7 +62,8 @@ class SPL_API_Reports_201_WiFi_Use extends SPL_API_Reports {
                         'hy'=>'Hillyard',
                         'it'=>'Indian Trail',
                         'sh'=>'Shadle',
-                        'so'=>'South Hill'
+                        'so'=>'South Hill',
+                        'lvl'=>'Level Up'
                         );
   }
 
@@ -153,6 +154,14 @@ class SPL_API_Reports_201_WiFi_Use extends SPL_API_Reports {
                     case 'so_mobile':
                             $summary['branch']['so']['mobile'] += $stat['count'];
                             $summary['branch']['so']['count'] += $stat['count'];
+                        break;
+                    case 'lvl':
+                            $summary['branch']['lvl']['non-mobile'] += $stat['count'];
+                            $summary['branch']['lvl']['count'] += $stat['count'];
+                        break;
+                    case 'lvl_mobile':
+                            $summary['branch']['lvl']['mobile'] += $stat['count'];
+                            $summary['branch']['lvl']['count'] += $stat['count'];
                         break;
                 
                 }
