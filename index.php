@@ -170,7 +170,7 @@ class SPL_API {
         break;
 
       case 'level-up':
-        require 'class/SPL_API_Level_up.php';
+        require 'class/SPL_API_Level_Up.php';
         $api = new SPL_API_Level_Up($this->config, $this->request, $this->apikey);
         //if ( $this->apikey ) {
           $call = $api->getApiRequest();
