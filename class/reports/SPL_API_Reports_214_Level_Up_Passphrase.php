@@ -13,6 +13,19 @@ class SPL_API_Reports_214_Level_Up_Passphrase extends SPL_API_Reports {
 		$params = array();
 
 
+		if ( $this->params['vals']['passphrase'] ) {
+
+			$params[':passphrase'] = $this->params['vals']['passphrase'];
+			
+			$sql = "UPDATE 
+				SPL_Connect.dbo.spl_connect_level_up_login
+				SET passphrase = :passphrase
+            ";
+
+    		$result = $this->getQuery($sql, $params);
+
+		}
+
 
 		
 		$sql = "SELECT 
