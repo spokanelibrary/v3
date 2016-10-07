@@ -172,11 +172,11 @@ class SPL_API {
       case 'level-up':
         require 'class/SPL_API_Level_Up.php';
         $api = new SPL_API_Level_Up($this->config, $this->request, $this->apikey);
-        //if ( $this->apikey ) {
+        if ( $this->apikey ) {
           $call = $api->getApiRequest();
-        //} else {
-          //$call = $this->raiseError('not authorized');
-        //}
+        } else {
+          $call = $this->raiseError('not authorized');
+        }
         break;
 
       case 'pc-res':
