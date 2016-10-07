@@ -14,13 +14,9 @@ class SPL_API_Reports_214_Level_Up_Passphrase extends SPL_API_Reports {
 
 		
 		$sql = "SELECT 
-				ibarcode
-				,substring( processed, 1, 30 ) title
-				,internal_note
-				FROM item_with_title 
-				WHERE internal_note IS NOT NULL
- 				AND internal_note LIKE 'SS %'
-				ORDER BY ibarcode
+				passphrase
+				FROM
+				SPL_Connect.dbo.spl_connect_level_up_login
             ";
 
     	$result = $this->getQuery($sql, $params);
