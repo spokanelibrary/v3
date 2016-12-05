@@ -1,7 +1,7 @@
 <?php
 
 ini_set("memory_limit","1G");
-ini_set('max_execution_time', 240);
+ini_set('max_execution_time', 600);
 
 require_once('base/SPL_DB.php');
 
